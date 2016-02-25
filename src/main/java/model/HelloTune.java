@@ -1,5 +1,6 @@
 package model;
 
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import constants.ApiConstants;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -9,6 +10,7 @@ import java.io.Serializable;
 /**
  * Created by rohit on 2/25/16.
  */
+@JsonSerialize
 public class HelloTune implements Serializable {
     private String mId;
 

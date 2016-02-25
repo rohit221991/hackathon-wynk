@@ -1,5 +1,6 @@
 package constants;
 
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import utils.SparseArray;
 
 import java.util.HashMap;
@@ -8,6 +9,7 @@ import java.util.Map;
 /**
  * Created by rohit on 2/25/16.
  */
+@JsonSerialize
 public enum ItemType {
     SONG(1, "song"), ALBUM(2, "album"), PLAYLIST(3, "playlist"), ARTIST(4, "artist"), MOOD(5, "mood"), USERPLAYLIST(6,
             "userplaylist"), GENRE(7, "genre"), MODULE(8, "package"), TOP_PAGE(9, "top_page"), SEARCH_RESULT(10,
@@ -26,7 +28,9 @@ public enum ItemType {
 
     private static Map<String, ItemType> itemNameToTypeMapping = new HashMap<String, ItemType>();
 
-    private static SparseArray<ItemType> itemIdToTypeMapping   = new SparseArray<ItemType>();
+    private static Map<Integer, ItemType> itemIdToTypeMapping = new HashMap<Integer, ItemType>();
+
+
 
     static {
         for (ItemType type : ItemType.values()) {

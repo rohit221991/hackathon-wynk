@@ -1,9 +1,11 @@
 package utils;
 
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+
 /**
  * Created by rohit on 2/25/16.
  */
-
+@JsonSerialize
 public class SparseArray<E> implements Cloneable {
     public SparseArray() {
         throw new RuntimeException("Stub!");

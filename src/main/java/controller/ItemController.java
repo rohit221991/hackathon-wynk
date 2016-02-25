@@ -24,8 +24,8 @@ public class ItemController {
     @RequestMapping(value = "/", method = RequestMethod.GET)
     public CustomResponse<List<Item> >searchByName(){
      //   return new CustomResponse<String>("hi","Success",0,true);
-
         items.add(new Item());
+
         CustomResponse<List<Item> > response = new CustomResponse<List<Item>>(items,"Success",0,true);
         return response;
     }
@@ -35,10 +35,10 @@ public class ItemController {
     public CustomListResponse getItems(){
         //   return new CustomResponse<String>("hi","Success",0,true);
 
-        ArrayList<String> list = new ArrayList<String>();
-        list.add("hey");
+        ArrayList<Item> list = new ArrayList<Item>();
+        list.add(new Item());
         items.add(new Item());
-        CustomListResponse<String> response = new CustomListResponse<String>(list);
+        CustomListResponse<Item> response = new CustomListResponse<Item>(list);
         return response;
     }
 
