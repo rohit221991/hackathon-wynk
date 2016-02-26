@@ -10,14 +10,15 @@ public class CustomListResponse<T> {
 
     private int total;
     private int count;
-    private int offset;
+    private int offset_;
     private String lang;
+
 
     public CustomListResponse(ArrayList<T> items) {
         this.items = items;
         this.count= items.size();
         this.total= items.size();
-        this.offset=0;
+        this.offset_=0;
         this.lang="en";
     }
 
@@ -45,12 +46,12 @@ public class CustomListResponse<T> {
         this.count = count;
     }
 
-    public int getOffset() {
-        return offset;
+    public int getOffset_() {
+        return offset_;
     }
 
-    public void setOffset(int offset) {
-        this.offset = offset;
+    public void setOffset_(int offset) {
+        this.offset_ = offset;
     }
 
     public String getLang() {
